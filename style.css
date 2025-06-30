@@ -13,9 +13,9 @@ body {
 }
 
 header {
-    background: #333;
+    background: #000000;
     color: #fff;
-    padding: 10px 0;
+    padding: 1px ;
 }
 
 nav ul {
@@ -39,10 +39,11 @@ section {
 }
 
 footer {
-    background:rgb(160, 160, 160);
+    background:rgb(0, 0, 0);
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 0px 0;
+    margin-top: auto;
 }
 
 /* Carousel styles */
@@ -71,3 +72,15 @@ footer {
 }
 .carousel-btn.prev { left: 0; }
 .carousel-btn.next { right: 0; }
+
+/* Add these styles at the end of your file */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

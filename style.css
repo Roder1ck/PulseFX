@@ -1,86 +1,231 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+/* Reset & Base */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-#name {
-    text-align: center;
-    font-size: 2em;
-    margin-top: 20px;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
     color: #333;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header & Navigation */
 header {
-    background: #000000;
-    color: #fff;
-    padding: 1px ;
+    background-color: #111;
+    padding: 20px 0;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
 nav ul li a {
     color: #fff;
-    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
 }
 
-section {
-    padding: 20px;
-    border-bottom: 1px solid #ccc;
+nav ul li a:hover {
+    background-color: #444;
+    border-radius: 5px;
 }
 
-footer {
-    background:rgb(0, 0, 0);
-    color: #fff;
+/* Hero Section */
+.hero {
+    background: url('images/hero-bg.jpg') center center/cover no-repeat;
     text-align: center;
-    padding: 0px 0;
-    margin-top: auto;
+    padding: 100px 20px;
+    color: white;
+    background-color: #222;
 }
 
-/* Carousel styles */
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #e91e63;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #c2185b;
+}
+
+/* Carousel */
 .carousel {
     position: relative;
-    width: 400px;
-    margin: 20px auto;
+    max-width: 100%;
+    margin: 40px auto;
+    overflow: hidden;
     text-align: center;
 }
+
 .carousel-img {
     width: 100%;
-    height: auto;
-    display: none;
+    max-height: 500px;
+    object-fit: cover;
 }
+
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
-    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     border: none;
+    padding: 12px;
     font-size: 2rem;
     cursor: pointer;
-    padding: 0 10px;
-    z-index: 1;
-}
-.carousel-btn.prev { left: 0; }
-.carousel-btn.next { right: 0; }
-
-/* Add these styles at the end of your file */
-
-html, body {
-    height: 100%;
+    z-index: 10;
 }
 
-body {
-    min-height: 100vh;
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+section:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+/* Gallery Styles */
+.product-gallery,
+.service-gallery {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.product-gallery img,
+.service-gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.product-gallery img:hover,
+.service-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #e91e63;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .product-gallery img,
+    .service-gallery img {
+        width: 90%;
+        height: auto;
+    }
+
+    .btn {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-btn {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .hero {
+        padding: 80px 10px;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+.carousel-img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    display: none;
 }

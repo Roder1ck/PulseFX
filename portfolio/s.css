@@ -155,7 +155,8 @@ section:nth-of-type(even) {
     margin-top: 20px;
 }
 
-.projectStack > div {
+.projectCard {
+    display: block;
     width: 300px;
     min-height: 180px;
     border-radius: 12px;
@@ -163,9 +164,10 @@ section:nth-of-type(even) {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     padding: 25px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
-.projectStack > div:hover {
+.projectCard:hover {
     transform: translateY(-5px);
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
 }
@@ -248,7 +250,7 @@ footer {
         font-size: 1.3rem;
     }
 
-    .projectStack > div {
+    .projectCard {
         width: 100%;
     }
 }

@@ -1,0 +1,254 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+}
+
+img,
+video {
+    max-width: 100%;
+    display: block;
+}
+
+/* Header & Navigation */
+#navBar {
+    background-color: #111;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navLogo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.navLinks {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.navLinks li a {
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navLinks li a:hover {
+    background-color: #444;
+}
+
+/* Top Header */
+#topHead {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.videoHeader {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.videoHeader h1 {
+    font-size: 2.5rem;
+    margin: 20px 0 10px;
+}
+
+.videoHeader .name {
+    color: #e91e63;
+}
+
+.videoHeader p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+}
+
+section:nth-of-type(even) {
+    background-color: #f1f1f1;
+}
+
+#myInfo,
+#contactInfo {
+    background-color: #fff;
+}
+
+.infoHeader,
+.projectHead,
+.contactHead {
+    margin-bottom: 30px;
+}
+
+.infoHeader h3,
+.projectHead h3,
+.contactHead h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.infoHeader p,
+.projectHead p,
+.contactHead p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+}
+
+.idPhoto {
+    display: flex;
+    justify-content: center;
+}
+
+.idPhoto img {
+    width: 280px;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.projectStack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.projectStack > div {
+    width: 300px;
+    min-height: 180px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectStack > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.contactMethods,
+.socialMedia {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.contactMethods div,
+.socialMedia div {
+    width: 100%;
+    min-height: 90px;
+    background-color: #111;
+    color: #fff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.socialMedia {
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.9rem;
+}
+
+.footerBrand,
+.footerCopy {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navLinks {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .videoHeader h1 {
+        font-size: 2rem;
+    }
+
+    .projectStack {
+        flex-direction: column;
+    }
+
+    .contactMethods,
+    .socialMedia {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    #topHead {
+        padding: 60px 15px;
+    }
+
+    .videoHeader h1 {
+        font-size: 1.7rem;
+    }
+
+    .videoHeader p {
+        font-size: 1rem;
+    }
+
+    .navLogo {
+        font-size: 1.3rem;
+    }
+
+    .projectStack > div {
+        width: 100%;
+    }
+}

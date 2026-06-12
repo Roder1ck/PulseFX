@@ -1,0 +1,87 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>PIE Player — Programmable Integrated Exhibition Player</title>
+	<link rel="stylesheet" href="../s.css">
+</head>
+<body>
+	<main class="wrap">
+		<header>
+			<h1><span class="emoji">🥧</span>PIE Player</h1>
+			<div class="lead">Programmable Integrated Exhibition Player — lightweight web-native digital signage with a zero-backend philosophy.</div>
+			<div class="meta"><a href="https://github.com/Roder1ck/PIE-Player-" target="_blank" rel="noopener">Project Website</a></div>
+		</header>
+
+		<section>
+			<h2>📖 Description</h2>
+			<p>The <strong>PIE Player</strong> (Programmable Integrated Exhibition Player) is an out-of-the-box advertisement loop system built with modern web technologies. It separates management from presentation so a secondary control device can update a live display in real time.</p>
+		</section>
+
+		<section>
+			<h2>🚀 Key Features</h2>
+			<div class="grid">
+				<div class="card">
+					<h3>Dual-Page Architecture</h3>
+					<ul>
+						<li><strong>The Kitchen (Manager):</strong> UI to structure playlists, add media URLs, and set timings.</li>
+						<li><strong>The Plate (Display):</strong> Full-screen, distraction-free playback.</li>
+					</ul>
+				</div>
+				<div class="card">
+					<h3>Intelligent Media Handling</h3>
+					<ul>
+						<li><strong>Images:</strong> Customizable display durations.</li>
+						<li><strong>Videos:</strong> Auto transition on end-of-file via <code>onended</code>.</li>
+					</ul>
+				</div>
+				<div class="card">
+					<h3>Transitions & Sync</h3>
+					<ul>
+						<li>Hardware-accelerated fade animations for smooth transitions.</li>
+						<li>Instant-Sync using the browser <code>StorageEvent</code> API.</li>
+					</ul>
+				</div>
+				<div class="card">
+					<h3>Pure Vanilla Stack</h3>
+					<ul>
+						<li>Built with HTML5, CSS3, and plain JavaScript. No libraries or backend required.</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h2>🛠️ How It Works</h2>
+			<ol>
+				<li>The app runs fully in the browser using <code>localStorage</code> to persist playlists.</li>
+				<li>Once a playlist is saved ("Baked"), the Display page loops through items continuously.</li>
+				<li>Images use <code>setTimeout</code>; videos use <code>onended</code> for precise handoff.</li>
+			</ol>
+		</section>
+
+		<section>
+			<h2>📂 File Structure</h2>
+			<ul>
+				<li><code>manage.html</code> — Configuration dashboard to build playlists.</li>
+				<li><code>display.html</code> — Output screen for playback.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>📥 Installation & Setup</h2>
+			<ol>
+				<li>Copy <code>manage.html</code> and <code>display.html</code> into the same folder.</li>
+				<li>Open <code>display.html</code> (press F11 for full-screen).</li>
+				<li>Open <code>manage.html</code> on a secondary device or tab, add media URLs, and click <strong>Apply & Save</strong>.</li>
+			</ol>
+		</section>
+
+		<footer>
+			<small>PIE Player — Cinematic signage simplified.</small>
+		</footer>
+	</main>
+</body>
+</html>
